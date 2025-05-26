@@ -1,54 +1,116 @@
-# React + TypeScript + Vite
+# MyCV
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal CV/portfolio web application built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Structure
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+.
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── README.md
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+├── vite.config.ts
+├── public/
+│   └── vite.svg
+└── src/
+    ├── App.css
+    ├── App.tsx
+    ├── index.css
+    ├── main.tsx
+    ├── vite-env.d.ts
+    ├── assets/
+    │   ├── myPhoto.jpg
+    │   └── react.svg
+    └── components/
+        ├── Contact.css
+        ├── Contact.tsx
+        ├── Education.css
+        ├── Education.tsx
+        ├── MySelf.css
+        ├── MySelf.tsx
+        ├── Reference.css
+        ├── Reference.tsx
+        └── mySelf.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Scripts
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Defined in [package.json](package.json):
+
+- `dev` – Start the Vite development server
+- `build` – Type-check and build the app for production
+- `lint` – Run ESLint on the project
+- `preview` – Preview the production build
+
+---
+
+## Dependencies
+
+From [package.json](package.json):
+
+**Dependencies:**
+
+- react ^19.1.0
+- react-dom ^19.1.0
+
+**DevDependencies:**
+
+- @eslint/js ^9.25.0
+- @types/react ^19.1.2
+- @types/react-dom ^19.1.2
+- @vitejs/plugin-react ^4.4.1
+- eslint ^9.25.0
+- eslint-plugin-react-hooks ^5.2.0
+- eslint-plugin-react-refresh ^0.4.19
+- globals ^16.0.0
+- typescript ~5.8.3
+- typescript-eslint ^8.30.1
+- vite ^6.3.5
+
+---
+
+## Main Files
+
+- [index.html](index.html): HTML entry point
+- [vite.config.ts](vite.config.ts): Vite configuration
+- [src/main.tsx](src/main.tsx): React entry point
+- [src/App.tsx](src/App.tsx): Main App component
+- [src/components/](src/components/): Contains all React components (Contact, Education, MySelf, Reference, etc.)
+- [src/assets/](src/assets/): Static assets (images, SVGs)
+- [src/App.css](src/App.css), [src/index.css](src/index.css): Styling
+
+---
+
+## Getting Started
+
+1. Install dependencies:
+   ```sh
+   npm install
+   ```
+2. Start the development server:
+   ```sh
+   npm run dev
+   ```
+3. Build for production:
+   ```sh
+   npm run build
+   ```
+4. Preview the production build:
+   ```sh
+   npm run preview
+   ```
+
+---
+
+## License
+
+MIT (add your license here)
